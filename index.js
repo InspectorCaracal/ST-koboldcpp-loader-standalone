@@ -159,6 +159,10 @@ function onStatusChange(e)
         reconnect_attempts = 0;
 }
 
+function getModelList(args, value) {
+    return kobold_models;
+}
+
 SlashCommandParser.addCommandObject(SlashCommand.fromProps({
     name: "kcpp-load",
     callback: onModelLoad,
@@ -185,7 +189,11 @@ SlashCommandParser.addCommandObject(SlashCommand.fromProps({
         }),
     ],*/
 }));
-
+SlashCommandParser.addCommandObject(SlashCommand.fromProps({
+    name: "kcpp-list",
+    callback: getModelList,
+    helpString: "Retrieve a list of available kcpp configurations",
+}));
 /*
 SlashCommandParser.addCommandObject(SlashCommand.fromProps({
     name: "kcpp-unload",
