@@ -239,7 +239,7 @@ jQuery(async function() {
     
     await loadSettings();
         
-    $('#kobold_api_url').val(extension_settings.koboldapi.url).on('input',onKoboldURLChanged);
+    $('#koboldcpp_api_url_text').val(extension_settings.koboldapi.url).on('input',onKoboldURLChanged);
     //$('#kobold_api_model_opt').val(extension_settings.koboldapi.opt).on('input',onKoboldOptChanged);
     //$('#kobold_api_model_context')
     //  .val(extension_settings.koboldapi.context)
